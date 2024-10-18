@@ -1,0 +1,14 @@
+<ActionBar title="Alumni Association"></ActionBar>
+
+<GridLayout rows="auto, *" class="p-4">
+  <Label text="Welcome to the Alumni Association" class="text-2xl font-bold mb-4" row="0"></Label>
+  <ScrollView row="1">
+    <StackLayout>
+      <Button text="My Profile" [nsRouterLink]="['/profile']" class="btn btn-primary m-2"></Button>
+      <Button text="Make a Donation" [nsRouterLink]="['/donation']" class="btn btn-primary m-2"></Button>
+      <Button text="Networking" [nsRouterLink]="['/networking']" class="btn btn-primary m-2"></Button>
+      <Button text="Job Portal" [nsRouterLink]="['/job-portal']" class="btn btn-primary m-2"></Button>
+      <Button text="Events" [nsRouterLink]="['/events']" class="btn btn-primary m-2"></Button>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

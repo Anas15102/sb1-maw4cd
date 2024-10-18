@@ -1,0 +1,12 @@
+<ActionBar title="Events"></ActionBar>
+
+<ListView [items]="events" class="list-group">
+  <ng-template let-event="item">
+    <StackLayout class="list-group-item">
+      <Label [text]="event.name" class="font-bold"></Label>
+      <Label [text]="'Date: ' + event.date"></Label>
+      <Label [text]="'Location: ' + event.location"></Label>
+      <Button text="RSVP" class="btn btn-primary btn-sm m-t-10"></Button>
+    </StackLayout>
+  </ng-template>
+</ListView>

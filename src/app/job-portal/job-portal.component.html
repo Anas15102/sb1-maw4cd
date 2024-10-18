@@ -1,0 +1,14 @@
+<ActionBar title="Job Portal"></ActionBar>
+
+<GridLayout rows="auto, *">
+  <SearchBar hint="Search jobs" class="m-2" row="0"></SearchBar>
+  <ListView [items]="jobs" row="1" class="list-group">
+    <ng-template let-job="item">
+      <StackLayout class="list-group-item">
+        <Label [text]="job.title" class="font-bold"></Label>
+        <Label [text]="job.company"></Label>
+        <Label [text]="job.location"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>

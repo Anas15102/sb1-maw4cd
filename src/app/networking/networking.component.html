@@ -1,0 +1,14 @@
+<ActionBar title="Networking"></ActionBar>
+
+<GridLayout rows="auto, *">
+  <SearchBar hint="Search alumni" class="m-2" row="0"></SearchBar>
+  <ListView [items]="alumni" row="1" class="list-group">
+    <ng-template let-item="item">
+      <StackLayout class="list-group-item">
+        <Label [text]="item.name" class="font-bold"></Label>
+        <Label [text]="'Class of ' + item.graduationYear"></Label>
+        <Label [text]="item.company"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>

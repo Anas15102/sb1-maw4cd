@@ -1,0 +1,13 @@
+<ActionBar [title]="isNewProfile ? 'Create Profile' : 'Update Profile'"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label [text]="isNewProfile ? 'Create Your Profile' : 'Update Your Profile'" class="text-xl font-bold mb-4"></Label>
+    <TextField [(ngModel)]="profile.fullName" hint="Full Name" class="input mb-2"></TextField>
+    <TextField [(ngModel)]="profile.graduationYear" hint="Graduation Year" keyboardType="number" class="input mb-2"></TextField>
+    <TextField [(ngModel)]="profile.fieldOfStudy" hint="Field of Study" class="input mb-2"></TextField>
+    <TextField [(ngModel)]="profile.jobTitle" hint="Current Job Title" class="input mb-2"></TextField>
+    <TextField [(ngModel)]="profile.company" hint="Company" class="input mb-2"></TextField>
+    <Button [text]="isNewProfile ? 'Create Profile' : 'Update Profile'" (tap)="onSubmit()" class="btn btn-primary mt-4"></Button>
+  </StackLayout>
+</ScrollView>
